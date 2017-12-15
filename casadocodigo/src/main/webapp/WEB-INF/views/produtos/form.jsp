@@ -10,7 +10,7 @@
 <title>Livros de Java,  Android, Iphone, Ruby, PHP  e muito mais - Casa do código</title>
 </head>
 <body>
-	<form:form action="${s:mvcUrl('PC#gravar').build() }" method="post" commandName="produto">
+	<form:form action="${s:mvcUrl('PC#gravar').build() }" method="post" commandName="produto" enctype="multipart/form-data">
 		<div>
 			<label>Titulo</label>
 			<form:input path="titulo"/>
@@ -38,6 +38,10 @@
 				<form:hidden path="precos[${status.index }].tipo" value="${tipoPreco }"/>
 			</div>
 		</c:forEach>
+		<div>
+			<label>Sumário</label>
+			<input name="sumario" type="file">
+		</div>
 		<button type="submit">Cadastrar</button>
 	</form:form >
 </body>

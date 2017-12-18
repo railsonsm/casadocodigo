@@ -59,7 +59,7 @@ public class ProdutosController {
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView listar() {
 		ModelAndView modelAndView = new ModelAndView("produtos/lista");
-		List<Produto> produtos =  produtoDAO.find();
+		List<Produto> produtos =  produtoDAO.buscar();
 		modelAndView.addObject("produtos", produtos);
 		return modelAndView;
 	}
@@ -67,7 +67,7 @@ public class ProdutosController {
 	@RequestMapping("/detalhe/{id}")
 	public ModelAndView detalhe(@PathVariable("id") Integer id) {
 		ModelAndView modelAndView = new ModelAndView("produtos/detalhe");
-		Produto produto = produtoDAO.buscar(id);		
+		Produto produto = produtoDAO.find(id);		
 		modelAndView.addObject("produto", produto);
 		System.out.println(produto.getTitulo());
 		return modelAndView;

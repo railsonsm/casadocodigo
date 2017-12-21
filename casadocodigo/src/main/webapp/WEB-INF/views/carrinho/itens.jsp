@@ -46,7 +46,7 @@
 
   <header id="layout-header">
 		<div class="clearfix container">
-			<a href="/" id="logo">
+			<a href="${s:mvcUrl('PC#listar').build() }" id="logo">
 			</a>
 			<div id="header-content">
 				<nav id="main-nav">
@@ -112,7 +112,7 @@
 			          <td class="quantity-input-cell"><input type="number" min="0" readonly="readonly" id="quantidade" name="quantidade" value="${carrinhoCompras.getQuantidade(item) }"/></td>
 			          <td class="numeric-cell">${carrinhoCompras.getTotal(item) }</td>
 			          <td class="remove-item">
-			          	<form action="" method=""> 
+			          	<form action="${s:mvcUrl('CCC#remover').arg(0, item.produto.id).arg(1, item.tipoPreco).build() }" method="post"> 
 			          		<input type="image" src="${contextPath }resources/imagens/excluir.png" alt="Excluir" title="Excluir" /></td>
 			          	</form>
 			      </tr>
@@ -120,7 +120,10 @@
 		      </tbody>
 			      <tfoot>
 			        <tr>
-			          <td colspan="3"><input type="submit" class="checkout" name="checkout" value="Finalizar compra" /></td>
+			          <td colspan="3">
+			          <form action="${s:mvcUrl('PC#finalizar').build() }" method="post">
+			          	<input type="submit" class="checkout" name="checkout" value="Finalizar compra" /></td>
+			          </form>
 			          <td class="numeric-cell">${carrinhoCompras.total }</td><td></td>
 			        </tr>
 			      </tfoot>

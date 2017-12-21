@@ -14,6 +14,10 @@
 	<div>
 		${sucesso }
 	</div>
+	
+	<div>
+		${falha }
+	</div>
 	<table>
 		<tr>
 			<td>Titulo</td>

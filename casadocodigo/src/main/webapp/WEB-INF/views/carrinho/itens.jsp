@@ -46,7 +46,7 @@
 
   <header id="layout-header">
 		<div class="clearfix container">
-			<a href="${s:mvcUrl('PC#listar').build() }" id="logo">
+			<a href="${s:mvcUrl('HC#index').build() }" id="logo">
 			</a>
 			<div id="header-content">
 				<nav id="main-nav">

@@ -2,6 +2,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ attribute name="titulo" %>
 <%@ attribute name="bodyClass" %>
+<%@ attribute name="extraScripts" fragment="true"%>
+
 <!DOCTYPE html>
 <head>
 	<c:url value="/" var="contextPath" />
@@ -56,3 +58,5 @@
 <jsp:doBody />
 
 <%@include file="/WEB-INF/views/rodape.jsp" %>
+
+<jsp:invoke fragment="extraScripts"></jsp:invoke>

@@ -8,6 +8,13 @@
 
 <tags:pageTemplate titulo="Livros de Java, Android, Iphone, Ruby, PHP e muito mais">
 
+<jsp:attribute name="extraScripts">
+	<script>
+		
+	</script>
+</jsp:attribute>
+
+<jsp:body>
 	<section class="container middle">
 		  <h2 id="cart-title">Seu carrinho de compras</h2>
 		  
@@ -47,10 +54,10 @@
 		      </tbody>
 			      <tfoot>
 			        <tr>
-			          <td colspan="3">
-			          <form action="${s:mvcUrl('PC#finalizar').build() }" method="post">
+			          <td colspan="4">
+			          <form:form action="${s:mvcUrl('PC#finalizar').build() }" method="post">
 			          	<input type="submit" class="checkout" name="checkout" value="Finalizar compra" /></td>
-			          </form>
+			          </form:form>
 			          <td class="numeric-cell">${carrinhoCompras.total }</td><td></td>
 			        </tr>
 			      </tfoot>
@@ -67,4 +74,5 @@
 		  
 		  <h2><a href="http://www.casadocodigo.com.br">Veja todos os livros que publicamos!</a></h2>
 		</section> 
+</jsp:body>
 </tags:pageTemplate>

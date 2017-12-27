@@ -16,7 +16,7 @@
 		<link href="https://plus.googlecom/108540024862647200608"
 			rel="publisher"/>
 			
-		<title>${titulo } - Casa do CÃ³digo</title>
+		<title>${titulo } - Casa do Código</title>
 		
 		<link href="${contextPath}resources/css/cssbase-min.css"
 			rel="stylesheet" type="text/css" media="all" />
